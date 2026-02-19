@@ -1,21 +1,15 @@
-import express from "express";
-import fetch from "node-fetch";
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Input</title>
+</head>
+<body>
+  <h2>入力フォーム</h2>
 
-const app = express();
-app.use(express.json());
+  <input id="text" type="text" placeholder="ここに入力">
+  <button onclick="send()">送信</button>
 
-app.get("/", (req, res) => {
-  res.send("server alive");
-});
-
-app.post("/notify", async (req, res) => {
-  await fetch(process.env.DISCORD_WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ content: "Railwayから通知" })
-  });
-  res.json({ ok: true });
-});
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log("running"));
+  <script src="script.js"></script>
+</body>
+</html>
