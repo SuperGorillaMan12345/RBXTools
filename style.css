@@ -1,13 +1,1 @@
-body {
-  font-family: monospace;
-  background: #0f0f0f;
-  color: #eaeaea;
-  padding: 20px;
-}
 
-pre {
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 8px;
-  white-space: pre-wrap;
-}
